@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtTituloHome"
+        android:text="Resumen de Movimientos"
+        android:layout_width="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp" />
+
+    <TextView
+        android:id="@+id/tvFecha"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="2025-10-23"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnCambiarFecha"
+        android:text="Cambiar fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_white_rounded_corners"
+            android:padding="10dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/labelIngresos"
+                android:text="Ingresos 💵"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvIngresos"
+                android:textColor="@color/black"
+                android:text="$0.00"
+                android:textSize="26sp"
+                android:layout_width="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_rounded_corners"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:paddingHorizontal="24dp">
+
+            <TextView
+                android:id="@+id/labelGastos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Gastos 💸"
+
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvGastos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="$0.00"
+
+                android:textColor="@color/black"
+                android:textSize="26sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSaldo"
+        android:text="Saldo: $0.00"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

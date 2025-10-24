@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ControlDeDinero" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/verdeMoney</item>
+        <item name="colorPrimaryDark">@color/verdeMoneyDark</item>
+        <item name="colorAccent">@color/verdeMoney</item>
+
+        <item name="android:textColorPrimary">@color/blanco</item>
+
+        <item name="popupMenuStyle">@style/PopupMenuStyle</item>
+        <item name="actionOverflowMenuStyle">@style/PopupMenuStyle</item>
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+    </style>
+
+    <!-- Estilo para el menú de los tres puntos -->
+    <style name="PopupMenuStyle" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <!-- Fondo del menú -->
+        <item name="android:popupBackground">@color/verdeMoney</item>
+        <!-- Texto de los ítems -->
+        <item name="android:textColor">@color/blanco</item>
+    </style>
+
+    <style name="BotonVerde" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">@color/verdeMoney</item>
+        <item name="android:textColor">@color/blanco</item>
+    </style>
+
+    <style name="CustomSpinnerTheme" parent="Widget.AppCompat.Spinner">
+        <item name="android:popupBackground">?attr/colorSurface</item>
+    </style>
+
+
+</resources>
