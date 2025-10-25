@@ -37,6 +37,9 @@ class FragmentMovimientosForm : Fragment() {
         val btnEnviar = view.findViewById<Button>(R.id.btnEnviar)
         val btnDatePicker = view.findViewById<Button>(R.id.btnSeleccionarFecha)
         val labelFecha = view?.findViewById<TextView>(R.id.labelFecha)
+        val formTitle = view.findViewById<TextView>(R.id.txtTituloMovimientoForm)
+
+        formTitle.setText("Agregar Movimiento")
 
         val adapterTipo = ArrayAdapter(
             requireContext(),
@@ -49,7 +52,7 @@ class FragmentMovimientosForm : Fragment() {
         val adapterCategoria = ArrayAdapter(
             requireContext(),
             R.layout.spinner_item,
-            listOf("Venta", "Transporte", "Comida", "Salud", "Servicios", "Otros")
+            listOf("Venta", "Devolucion s/ compra", "Devolucion s/ venta", "Transporte", "Comida", "Salud", "Servicios", "Otro")
         )
         adapterCategoria.setDropDownViewResource(R.layout.spinner_dropdown_item)
         spCategoria.adapter = adapterCategoria
@@ -61,14 +64,17 @@ class FragmentMovimientosForm : Fragment() {
             spCategoria.setSelection(
                 when (mov?.categoria) {
                     "Venta" -> 0
-                    "Transporte" -> 1
-                    "Comida" -> 2
-                    "Salud" -> 3
-                    "Servicios" -> 4
-                    else -> 5
+                    "Devolucion s/ compra" -> 1
+                    "Devolucion s/ venta" -> 2
+                    "Transporte" -> 3
+                    "Comida" -> 4
+                    "Salud" -> 5
+                    "Servicios" -> 6
+                    else -> 7
                 })
             etDescripcion.setText(mov?.descripcion)
             etMonto.setText(mov?.monto.toString())
+            formTitle.setText("Actualizar Movimiento")
             labelFecha?.setText("Fecha: ${mov?.fecha}")
         }
 

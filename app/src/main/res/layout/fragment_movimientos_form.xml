@@ -9,7 +9,7 @@
     android:gravity="center_horizontal">
 
     <TextView
-        android:id="@+id/txtTituloMovimiento"
+        android:id="@+id/txtTituloMovimientoForm"
         android:text="Agregar Movimiento"
         android:layout_width="wrap_content"
         android:textSize="22sp"
